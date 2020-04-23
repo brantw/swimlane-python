@@ -19,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U -r requirements.txt
           pip install -U -r test-requirements.txt
-          pip install codacy-coverage
+          pip install codacy-coverage wheel
       - name: Test with pytest
         run: |
           py.test -v --cov=swimlane --cov-report=xml
