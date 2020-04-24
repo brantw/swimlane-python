@@ -32,9 +32,9 @@ jobs:
           working-directory: ./driver-automation
       - name: Run automation
         run: |
-          pip install -r ./driver-automation/qa-python-driver-automation/requirements.txt
+          pip install -r qa-python-driver-automation/requirements.txt
         # pytest --url "https://localhost"
-        #working-directory: ./driver-automation
+        working-directory: ./driver-automation
       - name: Deploy
         run: |
           python offline_installer/build_installer.py
