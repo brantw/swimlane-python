@@ -24,6 +24,16 @@ jobs:
         run: |
           py.test -v --cov=swimlane --cov-report=xml
         # python-codacy-coverage -r coverage.xml
+      - uses: actions/checkout@v2
+        with:
+          repository: brantw/qa-python-driver-automation
+          ref: master
+          working-directory: ./driver-automation
+      - name: Run automation
+        run: |
+          pip install -r requirements.txt
+        # pytest --url "https://localhost"
+        working-directory: ./driver-automation
       - name: Deploy
         run: |
           python offline_installer/build_installer.py
