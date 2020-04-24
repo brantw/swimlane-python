@@ -28,7 +28,7 @@ jobs:
         with:
           repository: brantw/qa-python-driver-automation
           ref: master
-          token: ${{ github.token }}
+          token: ${{ secrets.token }}
           working-directory: ./driver-automation
       - name: Run automation
         run: |
