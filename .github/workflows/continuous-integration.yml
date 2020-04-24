@@ -32,7 +32,8 @@ jobs:
           working-directory: ./driver-automation
       - name: Run automation
         run: |
-          ls
+          $FILES = ls -aR
+          echo $FILES
           pip install -r requirements.txt
         # pytest --url "https://localhost"
         working-directory: ./driver-automation
